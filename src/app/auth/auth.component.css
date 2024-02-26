@@ -1,0 +1,99 @@
+.main-container {
+  font-family: sans-serif;
+  height: 97vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-container > div {
+  flex: 1;
+}
+
+.main-container .container1 img {
+  padding-top: 26%;
+}
+
+.main-container .container3 img {
+  padding-top: 16%;
+}
+
+.main-container .container2 {
+  padding-top: 125px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container2 button {
+  margin-top: 40px;
+  padding: 14px 45px;
+  background: #0078d4;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px -0.7px rgba(0, 0, 0, 0.25);
+}
+
+.container2 button a {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.container2 button:hover {
+  background-color: #025ea6;
+}
+
+.main-container .container2 img {
+  height: 79px;
+}
+
+.headline span {
+  color: #34373d;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.header1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 16px;
+  color: #323130;
+}
+
+.learnMore {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  color: #0071c8;
+  cursor: pointer;
+}
+
+.learnMore:hover {
+  text-decoration: underline;
+}
+
+.download {
+  margin-top: 85px;
+  font-weight: bold;
+  color: #34373d;
+  font-size: 14px;
+}
+
+.icons img {
+  padding: 10px;
+  color: #34373d;
+}
+
+.terms {
+  margin-top: 15px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #34373d;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
