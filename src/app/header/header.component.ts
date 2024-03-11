@@ -7,4 +7,10 @@ import {Component} from '@angular/core';
 })
 export class HeaderComponent {
   showHeader: boolean = false;
+
+  isPopupVisible: boolean = false;
+
+  togglePopup() {
+    this.isPopupVisible = !this.isPopupVisible;
+  }
 }

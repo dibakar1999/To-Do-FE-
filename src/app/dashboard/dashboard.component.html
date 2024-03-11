@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="container1">
+    <ul *ngFor="let item of listOfCategory">
+      <li (click)="getTaskByCategoryCode(item.code)">{{item.name}}</li>
+    </ul>
+  </div>
+  <div class="container2">
+    <div class="task-header">{{categoryName}}</div>
+    <form *ngIf="showTaskField" #TaskData="ngForm"
+          (ngSubmit)="addTask(TaskData.value,selectedCategoryId); TaskData.resetForm()">
+      <div class="containt">
+        <img src="assets/circle_img.png" alt="" style="height: 20px">
+        <input placeholder="Add a task" ngModel name="task" type="text">
+      </div>
+    </form>
+    <div *ngFor="let item of listOfTask">
+      <div class="task-list">
+        <input type="checkbox" name="myCheckbox" id="myCheckboxId" value="checkboxValue">
+        <span>{{item.task}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="container3">
+    <div>Suggestion</div>
+  </div>
+</div>

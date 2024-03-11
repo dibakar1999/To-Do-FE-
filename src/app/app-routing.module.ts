@@ -3,10 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {HeaderComponent} from "./header/header.component";
 import {authGuard} from "./guard/auth.guard";
 import {AuthComponent} from "./auth/auth.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 const routes: Routes = [
   {path: '', component: HeaderComponent, canActivate: [authGuard]},
-  {path: 'auth', component: AuthComponent}
+  {path: 'auth', component: AuthComponent},
+  {path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

@@ -1,1 +1,8 @@
+<div class="login-header">
+  <img src="assets/signup.png" alt="" (click)="togglePopup()">
+  <div class="popup" *ngIf="isPopupVisible">
+    <span>username</span>
+    <div class="logout"><a routerLink="#">Logout</a></div>
+  </div>
+</div>
 <p *ngIf="showHeader">header works!</p>
