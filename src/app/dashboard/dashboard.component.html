@@ -1,11 +1,11 @@
 <div class="container">
   <div class="container1">
     <ul *ngFor="let item of listOfCategory">
-      <li (click)="getTaskByCategoryCode(item.code)">{{item.name}}</li>
+      <li (click)="getTaskByCategoryCode(item.code,item.name)">{{item.name}}</li>
     </ul>
   </div>
   <div class="container2">
-    <div class="task-header">{{categoryName}}</div>
+    <div class="task-header">{{title}}</div>
     <form *ngIf="showTaskField" #TaskData="ngForm"
           (ngSubmit)="addTask(TaskData.value,selectedCategoryId); TaskData.resetForm()">
       <div class="containt">
@@ -15,7 +15,8 @@
     </form>
     <div *ngFor="let item of listOfTask">
       <div class="task-list">
-        <input type="checkbox" name="myCheckbox" id="myCheckboxId" value="checkboxValue">
+        <input type="checkbox" [(ngModel)]="item.isCompleted"
+               (change)="updateTaskIsCompleted(item.id, item.isCompleted,item.categoryCode)">
         <span>{{item.task}}</span>
       </div>
     </div>

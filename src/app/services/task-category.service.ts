@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {SaveTask} from "../Data";
+import {SaveTask, UpdateTaskIsCompleted} from "../Data";
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,9 @@ export class TaskCategoryService {
 
   saveTask(data: SaveTask) {
     return this.http.post(`${this.HOST_URL}/task`, data);
+  }
+
+  updateTaskIsCompleted(data: UpdateTaskIsCompleted) {
+    return this.http.post(`${this.HOST_URL}/task/update`, data);
   }
 }

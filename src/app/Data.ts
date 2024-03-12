@@ -5,15 +5,22 @@ export interface Category {
 }
 
 export interface Task {
+  id: string,
   task: string,
   status: string,
-  categoryId: string,
-  categoryName: string
+  categoryCode: string,
+  categoryName: string,
+  isCompleted: boolean
 }
 
 export interface SaveTask {
-  categoryId: string,
+  categoryCode: string,
   task: string,
   dueDate: string,
   repeatDate: string
+}
+
+export interface UpdateTaskIsCompleted {
+  id: string,
+  isCompleted: boolean
 }
